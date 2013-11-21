@@ -1,0 +1,1 @@
+var search_data = {"index":{"searchIndex":["applicationcontroller","applicationhelper"],"longSearchIndex":["applicationcontroller","applicationhelper"],"info":[["ApplicationController","","ApplicationController.html","",""],["ApplicationHelper","","ApplicationHelper.html","",""]]}}
