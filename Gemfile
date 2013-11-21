@@ -20,6 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+# use Haml for templates
+gem 'haml'
+# use Ruby debugger
+group :development, :test do
+  gem 'debugger'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
