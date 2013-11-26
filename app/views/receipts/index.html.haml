@@ -1,0 +1,21 @@
+-#  This file is app/views/receipts/index.html.haml
+%h1 All Receipts
+
+%table#receipts
+  %thead
+    %tr
+      %th Purchase Date
+      %th Cost
+      %th Store
+      %th Payment Type
+      %th More Information
+  %tbody
+    - @receipts.each do |receipt|
+      %tr
+        %td= receipt.date 
+        %td= "$#{receipt.cost}"
+        %td= receipt.store
+        %td= receipt.payment
+        %td= link_to "More about #{receipt.title}", receipt_path(receipt)
+
+    = link_to 'Add new receipt', new_receipt_path

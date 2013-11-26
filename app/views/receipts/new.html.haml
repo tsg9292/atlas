@@ -1,0 +1,20 @@
+%h2 Create New Movie
+
+= form_tag receipts_path, :method => :post do
+
+  = label :receipt, :title, 'Title'
+  = text_field :movie, :title
+
+  = label :movie, :date, 'Date'
+  = date_select :movie, :date
+ 
+  = label :movie, :cost, 'Cost'
+  = text_field :movie, :cost
+
+  = label :movie, :payment, 'Payment Method'
+  = text_field :movie, :payment
+
+  = label :movie, :store, 'Store'
+  = text_field :movie, :store
+
+  = submit_tag 'Save Changes'

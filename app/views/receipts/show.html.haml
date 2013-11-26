@@ -1,0 +1,18 @@
+-# in app/views/receipts/show.html.haml
+
+%h2 Details about #{@receipt.title}
+
+%ul#details
+  %li
+    Cost:
+    = @receipt.cost
+  %li
+    Purchased on:
+    = @receipt.date.strftime("%B %d, %Y")
+
+%h3 Description:
+
+%p#description= @receipt.description
+
+= link_to 'Edit info', edit_receipt_path(@receipt)
+= link_to 'Back to receipt list', receipts_path
