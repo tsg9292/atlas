@@ -1,5 +1,5 @@
-Given /the following receipts exist/ do |receipts|
-	receipts.hashes.each do |receipt|
+Given /the following receipts exist/ do |receipts_table|
+	receipts_table.hashes.each do |receipt|
 		Receipt.create!(receipt)
 	end
 end
