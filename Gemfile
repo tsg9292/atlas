@@ -23,8 +23,19 @@ end
 # use Haml for templates
 gem 'haml'
 # use Ruby debugger
-group :development, :test do
+group :development do
   gem 'debugger'
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+end
+
+group :test do
+  gem 'debugger'
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
 end
 
 gem 'jquery-rails'
