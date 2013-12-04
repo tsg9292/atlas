@@ -4,15 +4,12 @@
 
 %ul#details
   %li
-    Cost:
-    = @receipt.cost
+    Cost: 
+    = "$#{@receipt.cost}"
   %li
     Purchased on:
     = @receipt.date.strftime("%B %d, %Y")
+    at 
+    = @receipt.store
 
-%h3 Description:
-
-%p#description= @receipt.description
-
-= link_to 'Edit info', edit_receipt_path(@receipt)
 = link_to 'Back to receipt list', receipts_path

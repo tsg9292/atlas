@@ -15,7 +15,7 @@
         %td= receipt.date 
         %td= "$#{receipt.cost}"
         %td= receipt.store
-        %td= receipt.payment
+        %td= "xxxx-xxxx-xxxx-#{receipt.payment}"
         %td= link_to "More about #{receipt.title}", receipt_path(receipt)
 
-    = link_to 'Add new receipt', new_receipt_path
+= link_to 'Add new receipt', new_receipt_path

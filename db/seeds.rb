@@ -12,7 +12,6 @@ more_receipts = [
 ]
 # NOTE: the following line temporarily allows mass assignment
 # (needed if you used attr_accessible/attr_protected in receipt.rb)
-Receipt.send(:attr_accessible, :title, :date, :cost, :store, :payment)
 more_receipts.each do |receipt|
 	Receipt.create!(receipt)
 end
