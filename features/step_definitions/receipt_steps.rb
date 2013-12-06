@@ -27,7 +27,11 @@ Given /I have added "(.*)" with date "(.*)", cost "(.*)", store "(.*)", payment 
 	when "November" then select(11, :from => "receipt_date_2i")	
 	when "December" then select(12, :from => "receipt_date_2i")
 	end
-<<<<<<< HEAD
+	select("#{date[2]}", :from => "receipt_date_3i")
+	fill_in("Cost", :with => cost)
+	fill_in("Store", :with => store)
+	fill_in("Payment", :with => payment)
+	click_button("Save Changes")
 end
 
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
@@ -43,16 +47,9 @@ Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   else
   assert false,"jr_fail"
   end
-=======
-	select("#{date[2]}", :from => "receipt_date_3i")
-	fill_in("Cost", :with => cost)
-	fill_in("Store", :with => store)
-	fill_in("Payment", :with => payment)
-	click_button("Save Changes")
 end
 
 Then /I should see "(.*)" on "(.*)"/ do |string, path|
 	step "I am on #{path}"
 	page.body.should =~ /#{string}/
->>>>>>> tg
 end
