@@ -34,4 +34,14 @@ Atlas::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :domain => 'taylor.s.graham@colorado.edu',
+  :user_name => 'tagr8563',
+  :password => 'Shiela_9292',
+  :authentication => 'plain',
+  :enable_starttls_auto => true }
 end

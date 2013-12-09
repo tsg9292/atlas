@@ -65,7 +65,7 @@ table#receipts th, table#receipts td {
   padding: 4px;
   text-align: left;
 }
-#notice, #warning {
+#warning {
   background: rosybrown;
   margin: 1em 0;
   padding: 4px;
@@ -75,4 +75,17 @@ form label {
   line-height: 25px;
   font-weight: bold;
   color: maroon;
+}
+#error {
+  border: 1px solid #000066;
+  padding: 4px;
+  margin-bottom: 10px;
+  background-color: #cc3333;
+}
+
+#notice {
+  border: 1px solid #000066;
+  padding: 4px;
+  margin-bottom: 10px;
+  background-color: #A3B15A;
 }

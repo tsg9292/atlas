@@ -1,0 +1,24 @@
+%h2 Edit Account Information
+
+=form_for @user, :as => :user, :url => account_settings_path, :method => :put do
+	= label :user, :password, 'current password:'
+	= password_field :user, :password
+	= show_field_error(@user, :password)
+
+	= label :user, :username, 'username: (leave unchanged if you are not changing your username)'
+	= text_field :user, :username
+	= show_field_error(@user, :username)
+
+	= label :user, :email, 'email: (leave unchanged if you are not changing your email address)'
+	= text_field :user, :email
+	= show_field_error(@user, :email)
+
+	= label :user, :new_password, 'new password: (leave blank if you are not changing your password)'
+	= password_field :user, :new_password
+	= show_field_error(@user, :new_password)
+
+	= label :user, :new_password_confirmation, 'confirm new password:'
+	= password_field :user, :new_password_confirmation
+	= show_field_error(@user, :new_password_confirmation)
+
+	=submit_tag 'Update'
