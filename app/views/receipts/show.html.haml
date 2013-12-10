@@ -12,4 +12,5 @@
     at 
     = @receipt.store
 
+= button_to 'Delete', receipt_path(@receipt), :method => :delete, :confirm => 'Are you sure?'
 = link_to 'Back to receipt list', receipts_path
