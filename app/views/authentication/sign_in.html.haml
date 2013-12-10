@@ -1,0 +1,19 @@
+%h2 Sign In
+= form_for @user, :as => :user, :url => sign_in_path(@user) do
+  
+  = label :user, :username, 'username or email:'
+  &nbsp
+  = text_field :user, :username
+  
+  = label :user, :password, 'password:'
+  &nbsp
+  = password_field :user, :password
+  <br>
+  = check_box :user, :remember_me
+  = label :user, :remember_me, 'remember me', :style =>"display:inline"
+  <br>
+  = submit_tag 'Sign In'
+  &nbsp&nbsp
+  = submit_tag 'Clear Form', :type => 'reset'
+  <br><br>
+  = link_to 'forgot your password?', :forgot_password

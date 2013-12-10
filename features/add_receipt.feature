@@ -17,11 +17,10 @@ Background: receipts have been added to database
 
 	And I am on the home page
 
-Scenario: Add a receipt
-	When I follow "Add new receipt"
-	Then I am on the new receipt page
-	When I fill in "Title" with "r6"
-	And I fill in "Cost" with "10.54"
-	And I press "Save Changes"
-	Then I am on the Atlas home page
-	And I should see "10.54"
+Scenario: View receipt list after adding receipt
+	Given I have added "t7" with date "2013-December-4", cost "1.00", store "lemonade stand", payment "4321"
+	And I have added "t8" with date "2013-December-5", cost "100.00", store "Apple", payment "1234"
+	And I am on the home page
+	Then I should see "t7" on "the home page"
+	And I should see "t8" on "the home page"
+	

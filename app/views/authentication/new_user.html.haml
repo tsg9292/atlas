@@ -1,0 +1,24 @@
+%h2 Sign Up
+= form_for @user, :as => :user, :url => new_user_path, :method => :put do
+  = label :user, :username, 'username:'
+  = text_field :user, :username
+  = show_field_error(@user, :username)
+
+  = label :user, :email, 'email:'
+  = text_field :user, :email
+  = show_field_error(@user, :email)
+
+  = label :user, :password, 'password:'
+  = password_field :user, :password
+  = show_field_error(@user, :password)
+
+  = label :user, :password, 'password confirmation:'
+  = password_field :user, :password
+  = show_field_error(@user, :password_confirmation)
+  <br>
+  = check_box :user, :remember_me
+  = label :remember_me, 'remember me'
+  <br>
+  = submit_tag 'Sign Up'
+  &nbsp&nbsp
+  = submit_tag 'Clear Form', :type => 'reset'
