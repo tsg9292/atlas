@@ -6,8 +6,19 @@ class ReceiptsController < ApplicationController
   	# will render app/views/receipts/show.html.haml by default
 	end
 
-	def index
-    @receipts = Receipt.all
+  def index
+	sort = params[:sort] #|| session[:sort]
+	case sort
+	when 'date'
+    ordering,@date_header = {:order => :date}, 'hilite'
+    @receipts = Receipt.find(:all, :order => "date")
+    return
+	when 'cost'
+	ordering,@cost_header = {:order => :cost}, 'hilite'
+	@receipts = Receipt.find(:all, :order => "cost")
+	return
+	end
+	@receipts = Receipt.all
   end
 
 	def new

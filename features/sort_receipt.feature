@@ -1,9 +1,9 @@
 
 Feature: User can sort receipts by date
 
-	As a user who wants to sort receipts by date
-	So that I can view receipts by date
-	I want to be able to sort receipts by date
+	As a user who wants to sort receipts by date or cost
+	So that I can view receipts by date or cost
+	I want to be able to sort receipts by date or cost
 
 Background: receipts have been added to database
 
@@ -21,3 +21,7 @@ Background: receipts have been added to database
 Scenario: sort receipts by date
 	When I follow "Purchase Date"
 	Then I should see "2013-11-25" before "2013-11-26"
+	
+//Scenario: sort receipts by date
+//	When I follow "Purchase Date"
+//	Then I should see "2013-11-25" before "2013-11-26"
