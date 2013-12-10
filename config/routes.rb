@@ -2,7 +2,7 @@ Atlas::Application.routes.draw do
 	get "users/new"
 
 	resources :receipts
-	root :to => "receipts#index"
+	root :to => "authentication#sign_in"
 
 	get "receipts_index" => "receipts#index"
 

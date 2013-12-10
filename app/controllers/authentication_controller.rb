@@ -2,7 +2,12 @@ class AuthenticationController < ApplicationController
   before_filter :authenticate_user, :only => [:account_settings, :set_account_info]
 
   def sign_in
-    @user = User.new
+    if current_user
+      redirect_to :receipts_index
+      return
+    else
+      @user = User.new
+    end
   end
 
   # =============== logging in ===============
