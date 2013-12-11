@@ -1,8 +1,5 @@
 Atlas::Application.routes.draw do
-<<<<<<< HEAD
-  resources :receipts
-  root :to => "receipts#index"
-=======
+
 	get "users/new"
 
 	resources :receipts
@@ -26,5 +23,5 @@ Atlas::Application.routes.draw do
 
 	get "password_reset" => "authentication#password_reset"
 	put "password_reset" => "authentication#new_password"
->>>>>>> 63a39bce933597e721c64e599370ada7529fe29a
+
 end
