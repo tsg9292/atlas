@@ -25,16 +25,16 @@ end
 gem 'haml'
 # use Ruby debugger
 group :development do
+  gem 'rspec-rails'
   gem 'debugger'
-  gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'debugger'
   gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
 end
