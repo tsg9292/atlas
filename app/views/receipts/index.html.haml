@@ -14,7 +14,7 @@
   %tbody
     - @receipts.each do |receipt|
       %tr
-        %td= receipt.date 
+        %td= receipt.date.strftime("Purchase made on %B %-d, %Y at %l:%M.%S %P")
         %td= "$#{receipt.cost}"
         %td= receipt.store
         %td= "xxxx-xxxx-xxxx-#{receipt.payment}"

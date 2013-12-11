@@ -8,7 +8,7 @@
     = "$#{@receipt.cost}"
   %li
     Purchased on:
-    = @receipt.date.strftime("%B %d, %Y")
+    = @receipt.date.strftime("%B %d, %Y %l:%M.%S %P")
     at 
     = @receipt.store
 
