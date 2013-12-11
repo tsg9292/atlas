@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20131208212524) do
   create_table "receipts", :force => true do |t|
     t.string   "title"
     t.datetime "date"
-    t.double   "cost"
+    t.string   "cost"
     t.string   "store"
     t.string   "payment"
     t.datetime "created_at", :null => false
