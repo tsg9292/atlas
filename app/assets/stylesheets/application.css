@@ -38,8 +38,9 @@ h1 {
   font-size: 150%;
   font-style: italic;
   display: block;
+  margin: 10px;
   width: 100%;
-  border-bottom: 1px solid DarkSlateGrey;
+  border-bottom: 5px solid DarkSlateGrey;
 }
 h1.title {
   margin: 0 0 1em;
@@ -51,9 +52,9 @@ h1.title {
   font-style: normal;
 }
 table#receipts {
-  margin: 10px;
+  margin: 15px;
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
   border-bottom: 2px solid black;
 }
 table#receipts th {

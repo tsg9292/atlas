@@ -3,7 +3,7 @@ class CreateReceipts < ActiveRecord::Migration
     create_table :receipts do |t|
       t.string :title
       t.datetime :date
-      t.string :cost
+      t.float :cost
       t.string :store
       t.string :payment
       # Add fields that let Rails automatically keep track
