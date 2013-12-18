@@ -16,8 +16,7 @@
         %td= link_to receipt.date.strftime("Purchase made on %B %-d, %Y at %l:%M.%S %P"), receipt_path(receipt)
         %td= "$%.2f" % receipt.cost
         %td{:class => @store_header}= link_to receipt.store, receipts_path(:sort => 'store', :sto => receipt.store), :id => 'store_header'
-        %td= if (receipt.payment.downcase == "cash") then "Cash" else "xxxx-xxxx-xxxx-#{receipt.payment}" end
-        %td= link_to "More about #{receipt.title}", receipt_path(receipt)
+        %td{:class => @payment_header}= link_to (if (receipt.payment.downcase == "cash") then "Cash" else "xxxx-xxxx-xxxx-#{receipt.payment}" end), receipts_path(:sort => 'payment', :pay => receipt.payment), :id => 'payment_header'
 
 &nbsp
 = link_to 'All Receipts', receipts_path(:sort => 'date', :id => 'purchase_date_header')

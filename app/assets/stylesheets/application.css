@@ -38,8 +38,8 @@ h1 {
   font-size: 150%;
   font-style: italic;
   display: block;
-  margin: 10px;
-  width: 100%;
+  margin: 1%;
+  width: 99%;
   border-bottom: 5px solid DarkSlateGrey;
 }
 h1.title {

@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20131208212524) do
 
   create_table "receipts", :force => true do |t|
-    t.string   "title"
     t.datetime "date"
     t.float    "cost"
     t.string   "store"
