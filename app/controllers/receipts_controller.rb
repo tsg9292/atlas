@@ -9,18 +9,26 @@ class ReceiptsController < ApplicationController
   	def index
 		sort = params[:sort] #|| session[:sort]
 		case sort
-		when 'date'
-    		ordering,@date_header = {:order => :date}, 'hilite'
-    		if (@receipts = Receipt.order("date DESC"))
-    			@receipts = Receipt.order("date ASC")
-    		elsif (@receipts = Receipt.order("date ASC"))
-    			@receipts = Receipt.order("date DESC")
-    		end
-    		return
-		when 'cost'
-			ordering,@cost_header = {:order => :cost}, 'hilite'
-			@receipts = Receipt.order("cost ASC")
+		when 'dateasc'
+    	ordering,@date_header = {:order => :dateasc}, 'hilite'
+    	@receipts = Receipt.order("date")
+    	return
+
+    when 'datedesc'
+      ordering,@date_header = {:order => :datedesc}, 'hilite'
+      @receipts = Receipt.order("date DESC")
+      return
+
+		when 'costasc'
+			ordering,@cost_header = {:order => :costasc}, 'hilite'
+			@receipts = Receipt.order("cost")
 			return
+
+    when 'costdesc'
+      ordering,@cost_header = {:order => :costdesc}, 'hilite'
+      @receipts = Receipt.order("cost DESC")
+      return
+
     when 'store'
       @receipts = Receipt.where("store = (?)", params[:sto])
       return

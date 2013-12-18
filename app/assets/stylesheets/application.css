@@ -81,8 +81,11 @@ form label {
   padding: 4px;
   color: #cc3333;
 }
-
 #notice {
   color: green;
   padding: 4px;
 }
+table#receipts th.hilite {
+  background-color: yellow;
+}
+
