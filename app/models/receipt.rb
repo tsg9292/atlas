@@ -1,3 +1,3 @@
 class Receipt < ActiveRecord::Base
-	attr_accessible :title, :date, :cost, :payment, :store
+	attr_accessible :date, :cost, :payment, :store, :usern
 end

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20131208212524) do
     t.float    "cost"
     t.string   "store"
     t.string   "payment"
+    t.string   "usern"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

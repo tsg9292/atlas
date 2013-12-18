@@ -10,15 +10,13 @@
       %th{:class => @cost_header}= link_to 'Cost', receipts_path(:sort => 'cost'), :id => 'cost_header'
       %th Store
       %th Payment Type
-      %th More Information
   %tbody
     - @receipts.each do |receipt|
       %tr
-        %td= receipt.date.strftime("Purchase made on %B %-d, %Y at %l:%M.%S %P")
+        %td= link_to receipt.date.strftime("Purchase made on %B %-d, %Y at %l:%M.%S %P"), receipt_path(receipt)
         %td= "$%.2f" % receipt.cost
         %td{:class => @store_header}= link_to receipt.store, receipts_path(:sort => 'store', :sto => receipt.store), :id => 'store_header'
         %td= if (receipt.payment == "Cash" || receipt.payment == "cash") then "Cash" else "xxxx-xxxx-xxxx-#{receipt.payment}" end
-        %td= link_to "More about #{receipt.title}", receipt_path(receipt)
 
 &nbsp
 = link_to 'All Receipts', receipts_path(:sort => 'date', :id => 'purchase_date_header')

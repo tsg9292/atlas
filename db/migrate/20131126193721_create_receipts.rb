@@ -1,11 +1,11 @@
 class CreateReceipts < ActiveRecord::Migration
   def up
     create_table :receipts do |t|
-      t.string :title
       t.datetime :date
       t.float :cost
       t.string :store
       t.string :payment
+      t.string :usern
       # Add fields that let Rails automatically keep track
       # of when movies are added or modified:
       t.timestamps
