@@ -1,9 +1,9 @@
 %h2 Create New Receipt
 
 = form_tag receipts_path, :method => :post do
-
-  = label :receipt, :usern, 'Please enter in your username'
-  = text_field :receipt, :usern
+  
+  = label :receipt, :usern, current_user.username
+  = hidden_field :receipt, :usern, :value => current_user.username
 
   = label :receipt, :date, 'Date'
   = datetime_select :receipt, :date
