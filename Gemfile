@@ -8,11 +8,12 @@ gem 'rails', '3.2.14'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+group :assets :production do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bcrypt-ruby', :require=>'bcrypt'
   gem 'uglifier', '>= 1.0.3'
+  gem 'pg'
 end
 
 # use Haml for templates
@@ -25,11 +26,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-end
-
-group :production do
-  gem 'pg'
-  gem 'bcrypt-ruby', :require=>'bcrypt'
 end
 
 group :test do
