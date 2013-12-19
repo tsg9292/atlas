@@ -28,9 +28,11 @@ class ReceiptsController < ApplicationController
     	@receipts = Receipt.order("cost DESC").where("usern = (?) and (?) > date", current_user.username, now)
     	return
     when 'store'
+      ordering,@store_header = {:order => :store}, 'hilite'
     	@receipts = Receipt.where("store == (?) and usern == (?) and (?) > date", params[:sto], current_user.username, now)
     	return
     when 'payment'
+      ordering,@payment_header = {:order => :payment}, 'hilite'
     	@receipts = Receipt.where("payment == (?) and usern == (?) and (?) > date", params[:pay], current_user.username, now)
     	return
     end
