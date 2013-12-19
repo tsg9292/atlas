@@ -16,12 +16,12 @@
 /* Add these lines to app/assets/stylesheets/application.css */
 
 html, body {
-  margin: 0;
+  margin: 10;
   padding: 0;
-  background: White;
-  color: DarkSlateGrey;
-  font-family: Tahoma, Verdana, sans-serif;
-  font-size: 10pt;
+  background: LightGrey;
+  color: Black;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 12pt;
 }
 div#main {
   margin: 0;
@@ -29,18 +29,19 @@ div#main {
 }
 a {
   background: transparent;
-  color: maroon;
-  text-decoration: underline;
+  color: DarkGreen;
+  text-decoration: none;
   font-weight: bold;
 }
 h1 {
-  color: maroon;
-  font-size: 150%;
+  color: DarkBlue;
+  font-size: 250%;
   font-style: italic;
-  display: block;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  display: inline-block;
   margin: 1%;
-  width: 99%;
-  border-bottom: 5px solid DarkSlateGrey;
+  width: 95%;
+  border-bottom: 5px solid DarkBlue;
 }
 h1.title {
   margin: 0 0 1em;
@@ -50,20 +51,21 @@ h1.title {
   border-bottom: 4px solid gold;
   font-size: 2em;
   font-style: normal;
+  
 }
 table#receipts {
   margin: 15px;
   border-collapse: collapse;
   width: 90%;
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid DarkBlue;
 }
 table#receipts th {
-  border: 2px solid white;
+  border: 3px solid DarkBlue;
   font-weight: bold;
-  background-color: wheat;
+  background-color: LightBlue;
 }
 table#receipts th, table#receipts td {
-  padding: 4px;
+  padding: 5px;
   text-align: left;
 }
 #warning {
@@ -75,7 +77,7 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: maroon;
+  color: DarkBlue;
 }
 #error {
   padding: 4px;
@@ -86,6 +88,6 @@ form label {
   padding: 4px;
 }
 table#receipts th.hilite {
-  background-color: yellow;
+  background-color: white;
 }
 
