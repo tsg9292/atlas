@@ -14,6 +14,7 @@ group :assets, :production do
   gem 'bcrypt-ruby', :require=>'bcrypt'
   gem 'uglifier', '>= 1.0.3'
   gem 'pg'
+  gem 'database_cleaner'
 end
 
 # use Haml for templates
