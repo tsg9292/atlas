@@ -26,6 +26,8 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
 end
+group :production do
+  gem 'pg'
 
 group :test do
   gem 'cucumber-rails'
