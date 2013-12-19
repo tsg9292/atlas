@@ -13,28 +13,28 @@ class ReceiptsController < ApplicationController
 	case sort
 	when 'dateasc'
 		ordering,@date_header = {:order => :dateasc}, 'hilite'
-    	@receipts = Receipt.order("date").where("usern = (?) and (?) > date and date >= (?)", current_user.username, now, twoWeeksAgo)
+    	@receipts = Receipt.order("date").where("usern = (?) and (?) > date", current_user.username, now)
     	return
     when 'datedesc'
       ordering,@date_header = {:order => :datedesc}, 'hilite'
-      @receipts = Receipt.order("date DESC").where("usern = (?) and (?) > date and date >= (?)", current_user.username, now, twoWeeksAgo)
+      @receipts = Receipt.order("date DESC").where("usern = (?) and (?) > date", current_user.username, now)
       return
 	when 'costasc'
 		ordering,@cost_header = {:order => :costasc}, 'hilite'
-		@receipts = Receipt.order("cost").where("usern = (?) and (?) > date and date >= (?)", current_user.username, now, twoWeeksAgo)
+		@receipts = Receipt.order("cost").where("usern = (?) and (?) > date", current_user.username, now)
 		return
     when 'costdesc'
     	ordering,@cost_header = {:order => :costdesc}, 'hilite'
-    	@receipts = Receipt.order("cost DESC").where("usern = (?) and (?) > date and date >= (?)", current_user.username, now, twoWeeksAgo)
+    	@receipts = Receipt.order("cost DESC").where("usern = (?) and (?) > date", current_user.username, now)
     	return
     when 'store'
-    	@receipts = Receipt.where("store == (?) and usern == (?) and (?) > date and date >= (?)", params[:sto], current_user.username, now, twoWeeksAgo)
+    	@receipts = Receipt.where("store == (?) and usern == (?) and (?) > date", params[:sto], current_user.username, now)
     	return
     when 'payment'
-    	@receipts = Receipt.where("payment == (?) and usern == (?) and (?) > date and date >= (?)", params[:pay], current_user.username, now, twoWeeksAgo)
+    	@receipts = Receipt.where("payment == (?) and usern == (?) and (?) > date", params[:pay], current_user.username, now)
     	return
     end
-    @receipts = Receipt.order("date").where("usern = (?) and (?) > date and date >= (?)", current_user.username, now, twoWeeksAgo)
+    @receipts = Receipt.order("date").where("usern = (?) and (?) > date", current_user.username, now)
   end
 
 	def new
